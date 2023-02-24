@@ -23,13 +23,11 @@ namespace CFDI.Controllers
         {
             try
             {
-                // Leer el archivo XML
-                var xmlDocument = new XmlDocument();
-                xmlDocument.Load(file.OpenReadStream());
+                var xml = XmlHelper.LoadXml(file);
 
-                XmlNamespaceManager nsmgr = new XmlNamespaceManager(xmlDocument.NameTable);
+                XmlNamespaceManager nsmgr = new XmlNamespaceManager(xml.NameTable);
 
-                foreach (XmlAttribute attr in xmlDocument.DocumentElement.Attributes)
+                foreach (XmlAttribute attr in xml.DocumentElement.Attributes)
                 {
                     if (attr.Name.StartsWith("xmlns"))
                     {
@@ -42,45 +40,40 @@ namespace CFDI.Controllers
                     }
                 }
 
-                //nsmgr.AddNamespace("c", nsmgr.LookupNamespace("cfdi"));
-                //nsmgr.AddNamespace("t", nsmgr.LookupNamespace("tfd"));
+                var dataCFDI = CFDI(xml, nsmgr);
 
-                // Obtener los valores de cada nodo del XML
-
-                //XmlNodeList nodeList = xmlDocument.SelectNodes("//cfdi:Comprobante//cfdi:Emisor", nsmgr);
-
-                //var modelEmisor = new Emisor
-                //{
-                //    Rfc = xmlDocument.SelectSingleNode("//cfdi:Comprobante//cfdi:Emisor//Rfc").InnerText,
-                //    Nombre = xmlDocument.SelectSingleNode("//cfdi:Comprobante//cfdi:Emisor//Nombre").InnerText
-                //};
-
-                //return Ok(modelEmisor);
-
-                var modelEmisor = new Emisor();
-
-                // Ejecutar la consulta XPath
-                XmlNodeList nodeList = xmlDocument.SelectNodes("//cfdi:Comprobante/cfdi:Emisor", nsmgr);
-
-                // Obtener los valores de los nodos seleccionados
-                foreach (XmlNode node in nodeList)
-                {
-                    // Obtener el valor del atributo "rfc"
-                    modelEmisor.Rfc = node.Attributes["Rfc"].Value;
-
-                    // Obtener el valor del atributo "nombre"                   
-                    modelEmisor.Nombre = node.Attributes["Nombre"].Value;
-
-                    // Obtener el valor del atributo "regimenFiscal"                    
-                    modelEmisor.RegimenFiscal = Convert.ToInt32(node.Attributes["RegimenFiscal"].Value);
-                }
-
-                return Ok(modelEmisor);
+                return Ok(dataCFDI);
             }
             catch (Exception ex)
             {
                 return BadRequest(ex.Message);
             }
+        }
+
+
+
+
+
+        private static Emisor CFDI(XmlDocument xml, XmlNamespaceManager nsmgr)
+        {
+            // Ejecutar la consulta XPath y crear el objeto Emisor
+            var nodeList = XmlHelper.SelectNodes(xml, "//cfdi:Comprobante/cfdi:Emisor", nsmgr);
+            var emisor = nodeList
+                .Cast<XmlNode>()
+                .Select(node => new Emisor
+                {
+                    Rfc = node.Attributes["Rfc"].Value,
+                    Nombre = node.Attributes["Nombre"].Value,
+                    RegimenFiscal = Convert.ToInt32(node.Attributes["RegimenFiscal"].Value)
+                })
+                .FirstOrDefault();
+
+            if (emisor == null)
+            {
+                throw new Exception("No se encontró el nodo Emisor en el archivo XML.");
+            }
+
+            return emisor;
         }
 
 

@@ -1,0 +1,14 @@
+C:\Users\MR.DESARR\Documents\Visual Studio 2019\Proyectos\CFDI\CFDI\obj\Release\net5.0\PubTmp\Out\CFDI.exe
+C:\Users\MR.DESARR\Documents\Visual Studio 2019\Proyectos\CFDI\CFDI\obj\Release\net5.0\PubTmp\Out\appsettings.Development.json
+C:\Users\MR.DESARR\Documents\Visual Studio 2019\Proyectos\CFDI\CFDI\obj\Release\net5.0\PubTmp\Out\appsettings.json
+C:\Users\MR.DESARR\Documents\Visual Studio 2019\Proyectos\CFDI\CFDI\obj\Release\net5.0\PubTmp\Out\CFDI.dll
+C:\Users\MR.DESARR\Documents\Visual Studio 2019\Proyectos\CFDI\CFDI\obj\Release\net5.0\PubTmp\Out\CFDI.deps.json
+C:\Users\MR.DESARR\Documents\Visual Studio 2019\Proyectos\CFDI\CFDI\obj\Release\net5.0\PubTmp\Out\CFDI.runtimeconfig.json
+C:\Users\MR.DESARR\Documents\Visual Studio 2019\Proyectos\CFDI\CFDI\obj\Release\net5.0\PubTmp\Out\CFDI.pdb
+C:\Users\MR.DESARR\Documents\Visual Studio 2019\Proyectos\CFDI\CFDI\obj\Release\net5.0\PubTmp\Out\Microsoft.DotNet.PlatformAbstractions.dll
+C:\Users\MR.DESARR\Documents\Visual Studio 2019\Proyectos\CFDI\CFDI\obj\Release\net5.0\PubTmp\Out\Microsoft.Extensions.DependencyModel.dll
+C:\Users\MR.DESARR\Documents\Visual Studio 2019\Proyectos\CFDI\CFDI\obj\Release\net5.0\PubTmp\Out\Microsoft.OpenApi.dll
+C:\Users\MR.DESARR\Documents\Visual Studio 2019\Proyectos\CFDI\CFDI\obj\Release\net5.0\PubTmp\Out\Newtonsoft.Json.dll
+C:\Users\MR.DESARR\Documents\Visual Studio 2019\Proyectos\CFDI\CFDI\obj\Release\net5.0\PubTmp\Out\Swashbuckle.AspNetCore.Swagger.dll
+C:\Users\MR.DESARR\Documents\Visual Studio 2019\Proyectos\CFDI\CFDI\obj\Release\net5.0\PubTmp\Out\Swashbuckle.AspNetCore.SwaggerGen.dll
+C:\Users\MR.DESARR\Documents\Visual Studio 2019\Proyectos\CFDI\CFDI\obj\Release\net5.0\PubTmp\Out\Swashbuckle.AspNetCore.SwaggerUI.dll

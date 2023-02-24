@@ -5,7 +5,6 @@ C:\Users\MR.DESARR\Documents\Visual Studio 2019\Proyectos\CFDI\CFDI\bin\Debug\ne
 C:\Users\MR.DESARR\Documents\Visual Studio 2019\Proyectos\CFDI\CFDI\bin\Debug\net5.0\CFDI.runtimeconfig.json
 C:\Users\MR.DESARR\Documents\Visual Studio 2019\Proyectos\CFDI\CFDI\bin\Debug\net5.0\CFDI.runtimeconfig.dev.json
 C:\Users\MR.DESARR\Documents\Visual Studio 2019\Proyectos\CFDI\CFDI\bin\Debug\net5.0\CFDI.dll
-C:\Users\MR.DESARR\Documents\Visual Studio 2019\Proyectos\CFDI\CFDI\bin\Debug\net5.0\ref\CFDI.dll
 C:\Users\MR.DESARR\Documents\Visual Studio 2019\Proyectos\CFDI\CFDI\bin\Debug\net5.0\CFDI.pdb
 C:\Users\MR.DESARR\Documents\Visual Studio 2019\Proyectos\CFDI\CFDI\bin\Debug\net5.0\Microsoft.DotNet.PlatformAbstractions.dll
 C:\Users\MR.DESARR\Documents\Visual Studio 2019\Proyectos\CFDI\CFDI\bin\Debug\net5.0\Microsoft.Extensions.DependencyModel.dll
@@ -22,7 +21,6 @@ C:\Users\MR.DESARR\Documents\Visual Studio 2019\Proyectos\CFDI\CFDI\obj\Debug\ne
 C:\Users\MR.DESARR\Documents\Visual Studio 2019\Proyectos\CFDI\CFDI\obj\Debug\net5.0\CFDI.MvcApplicationPartsAssemblyInfo.cs
 C:\Users\MR.DESARR\Documents\Visual Studio 2019\Proyectos\CFDI\CFDI\obj\Debug\net5.0\CFDI.MvcApplicationPartsAssemblyInfo.cache
 C:\Users\MR.DESARR\Documents\Visual Studio 2019\Proyectos\CFDI\CFDI\obj\Debug\net5.0\staticwebassets\CFDI.StaticWebAssets.Manifest.cache
-C:\Users\MR.DESARR\Documents\Visual Studio 2019\Proyectos\CFDI\CFDI\obj\Debug\net5.0\staticwebassets\CFDI.StaticWebAssets.xml
 C:\Users\MR.DESARR\Documents\Visual Studio 2019\Proyectos\CFDI\CFDI\obj\Debug\net5.0\scopedcss\bundle\CFDI.styles.css
 C:\Users\MR.DESARR\Documents\Visual Studio 2019\Proyectos\CFDI\CFDI\obj\Debug\net5.0\CFDI.RazorTargetAssemblyInfo.cache
 C:\Users\MR.DESARR\Documents\Visual Studio 2019\Proyectos\CFDI\CFDI\obj\Debug\net5.0\CFDI.csproj.CopyComplete
@@ -30,3 +28,5 @@ C:\Users\MR.DESARR\Documents\Visual Studio 2019\Proyectos\CFDI\CFDI\obj\Debug\ne
 C:\Users\MR.DESARR\Documents\Visual Studio 2019\Proyectos\CFDI\CFDI\obj\Debug\net5.0\ref\CFDI.dll
 C:\Users\MR.DESARR\Documents\Visual Studio 2019\Proyectos\CFDI\CFDI\obj\Debug\net5.0\CFDI.pdb
 C:\Users\MR.DESARR\Documents\Visual Studio 2019\Proyectos\CFDI\CFDI\obj\Debug\net5.0\CFDI.genruntimeconfig.cache
+C:\Users\MR.DESARR\Documents\Visual Studio 2019\Proyectos\CFDI\CFDI\bin\Debug\net5.0\ref\CFDI.dll
+C:\Users\MR.DESARR\Documents\Visual Studio 2019\Proyectos\CFDI\CFDI\obj\Debug\net5.0\staticwebassets\CFDI.StaticWebAssets.xml
