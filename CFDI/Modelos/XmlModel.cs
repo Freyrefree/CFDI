@@ -14,6 +14,8 @@ namespace CFDI
 
     }
 
+
+
 	// using System.Xml.Serialization;
 	// XmlSerializer serializer = new XmlSerializer(typeof(Comprobante));
 	// using (StringReader reader = new StringReader(xml))
