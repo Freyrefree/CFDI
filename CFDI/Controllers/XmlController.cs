@@ -32,11 +32,15 @@ namespace CFDI.Controllers
 
                 var dataEmisor = CFDIHelper.CFDI_Emisor();
                 var dataReceptor = CFDIHelper.CFDI_Receptor();
+                var dataConceptos = CFDIHelper.CFDI_Conceptos();
 
-                var CFDI = new CFDIModel
+
+                var CFDI = new Comprobante
                 {
                     Emisor = dataEmisor,
-                    Receptor = dataReceptor
+                    Receptor = dataReceptor,
+                    Conceptos = dataConceptos
+                   
                 };
 
                 return Ok(CFDI);

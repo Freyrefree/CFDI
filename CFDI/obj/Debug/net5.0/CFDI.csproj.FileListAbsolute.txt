@@ -13,7 +13,6 @@ C:\Users\MR.DESARR\Documents\Visual Studio 2019\Proyectos\CFDI\CFDI\bin\Debug\ne
 C:\Users\MR.DESARR\Documents\Visual Studio 2019\Proyectos\CFDI\CFDI\bin\Debug\net5.0\Swashbuckle.AspNetCore.Swagger.dll
 C:\Users\MR.DESARR\Documents\Visual Studio 2019\Proyectos\CFDI\CFDI\bin\Debug\net5.0\Swashbuckle.AspNetCore.SwaggerGen.dll
 C:\Users\MR.DESARR\Documents\Visual Studio 2019\Proyectos\CFDI\CFDI\bin\Debug\net5.0\Swashbuckle.AspNetCore.SwaggerUI.dll
-C:\Users\MR.DESARR\Documents\Visual Studio 2019\Proyectos\CFDI\CFDI\obj\Debug\net5.0\CFDI.csproj.AssemblyReference.cache
 C:\Users\MR.DESARR\Documents\Visual Studio 2019\Proyectos\CFDI\CFDI\obj\Debug\net5.0\CFDI.GeneratedMSBuildEditorConfig.editorconfig
 C:\Users\MR.DESARR\Documents\Visual Studio 2019\Proyectos\CFDI\CFDI\obj\Debug\net5.0\CFDI.AssemblyInfoInputs.cache
 C:\Users\MR.DESARR\Documents\Visual Studio 2019\Proyectos\CFDI\CFDI\obj\Debug\net5.0\CFDI.AssemblyInfo.cs

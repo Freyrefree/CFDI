@@ -6,15 +6,6 @@ using System.Xml.Serialization;
 
 namespace CFDI
 {
-    public class CFDIModel
-	{
-		public Emisor Emisor { get; set; }
-		public Receptor Receptor { get; set; }
-
-
-
-	}
-
 
 	[XmlRoot(ElementName = "Emisor")]
 	public class Emisor
@@ -67,7 +58,7 @@ namespace CFDI
 		public double TasaOCuota { get; set; }
 
 		[XmlAttribute(AttributeName = "Importe")]
-		public DateTime Importe { get; set; }
+		public double Importe { get; set; }
 	}
 
 	[XmlRoot(ElementName = "Traslados")]
@@ -122,7 +113,12 @@ namespace CFDI
 
 		[XmlAttribute(AttributeName = "ObjetoImp")]
 		public int ObjetoImp { get; set; }
-	}
+
+        public static implicit operator Concepto(List<Concepto> v)
+        {
+            throw new NotImplementedException();
+        }
+    }
 
 	[XmlRoot(ElementName = "Conceptos")]
 	public class Conceptos

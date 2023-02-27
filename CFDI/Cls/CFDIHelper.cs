@@ -56,5 +56,54 @@ namespace CFDI.Cls
 
             return data;
         }
+
+        public static Conceptos CFDI_Conceptos()
+        {
+            // Ejecutar la consulta XPath y crear el objeto Conceptos
+            var nodeList = XmlHelper.SelectNodes(xml, "//cfdi:Comprobante/cfdi:Conceptos/cfdi:Concepto", nsgmr);
+            var data = nodeList
+                .Cast<XmlNode>()
+                .Select(node => new Concepto
+                {
+                    ClaveProdServ = Convert.ToInt32(node.Attributes["ClaveProdServ"].Value),
+                    NoIdentificacion = Convert.ToInt32(node.Attributes["NoIdentificacion"].Value),
+                    Cantidad = DateTime.Parse(node.Attributes["Cantidad"].Value),
+                    ClaveUnidad = node.Attributes["ClaveUnidad"].Value,
+                    Descripcion = node.Attributes["Descripcion"].Value,
+                    ValorUnitario = Convert.ToDouble(node.Attributes["ValorUnitario"].Value),
+                    Importe = Convert.ToDouble(node.Attributes["Importe"].Value),
+                    Unidad = node.Attributes["Unidad"].Value,
+                    ObjetoImp = Convert.ToInt32(node.Attributes["ObjetoImp"].Value),
+                    Impuestos = new Impuestos
+                    {
+                        Traslados = new Traslados
+                        {
+                            Traslado = new Traslado
+                            {
+                                Base = Convert.ToDouble(node.SelectSingleNode("cfdi:Impuestos/cfdi:Traslados/cfdi:Traslado", nsgmr)?.Attributes["Base"]?.Value ?? "0"),
+                                Impuesto = Convert.ToInt32(node.SelectSingleNode("cfdi:Impuestos/cfdi:Traslados/cfdi:Traslado", nsgmr)?.Attributes["Impuesto"]?.Value ?? "0"),
+                                TipoFactor = node.SelectSingleNode("cfdi:Impuestos/cfdi:Traslados/cfdi:Traslado", nsgmr)?.Attributes["TipoFactor"]?.Value,
+                                TasaOCuota = Convert.ToDouble(node.SelectSingleNode("cfdi:Impuestos/cfdi:Traslados/cfdi:Traslado", nsgmr)?.Attributes["TasaOCuota"]?.Value ?? "0"),
+                                Importe = Convert.ToDouble(node.SelectSingleNode("cfdi:Impuestos/cfdi:Traslados/cfdi:Traslado", nsgmr)?.Attributes["Importe"]?.Value ?? "0")
+                            }
+                        }
+                    }
+                })
+                .ToList();
+
+            if (data.Count == 0)
+            {
+                throw new Exception("No se encontraron nodos Concepto en el archivo XML.");
+            }
+
+            var conceptos = new Conceptos
+            {
+                Concepto = data
+            };
+
+            return conceptos;
+        }
+
+
     }
 }
