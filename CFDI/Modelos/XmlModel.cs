@@ -6,22 +6,15 @@ using System.Xml.Serialization;
 
 namespace CFDI
 {
-    public class XmlModel
-    {
+    public class CFDIModel
+	{
+		public Emisor Emisor { get; set; }
+		public Receptor Receptor { get; set; }
 
 
 
+	}
 
-    }
-
-
-
-	// using System.Xml.Serialization;
-	// XmlSerializer serializer = new XmlSerializer(typeof(Comprobante));
-	// using (StringReader reader = new StringReader(xml))
-	// {
-	//    var test = (Comprobante)serializer.Deserialize(reader);
-	// }
 
 	[XmlRoot(ElementName = "Emisor")]
 	public class Emisor

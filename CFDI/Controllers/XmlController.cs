@@ -1,5 +1,4 @@
 ﻿using CFDI.Cls;
-using CFDI.Modelos;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using System;
@@ -21,7 +20,7 @@ namespace CFDI.Controllers
 
 
         [HttpPost]
-        public ActionResult<XmlModel> ParseXml([FromForm(Name = "file")] IFormFile file)
+        public ActionResult ParseXml([FromForm(Name = "file")] IFormFile file)
         {
 
             try
