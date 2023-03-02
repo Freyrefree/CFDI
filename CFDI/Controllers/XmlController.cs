@@ -65,27 +65,6 @@ namespace CFDI.Controllers
                 CFDI.Sello = dataComprobante.Sello;
 
 
-                //var dataEmisor = CFDIHelper.CFDI_Emisor();
-                //var dataReceptor = CFDIHelper.CFDI_Receptor();
-                //var dataConceptos = CFDIHelper.CFDI_Conceptos();
-                //var dataImpuestos = CFDIHelper.CFDI_Impuestos();
-                //var dataComplemento = CFDIHelper.CFDI_Complemento();
-                //var dataComprobante = CFDIHelper.CFDI_Comprobante();
-
-
-                ////var CFDI = new Comprobante
-                ////{
-                ////    Emisor = dataEmisor,
-                ////    Receptor = dataReceptor,
-                ////    Conceptos = dataConceptos,
-                ////    Impuestos = dataImpuestos,
-                ////    Complemento = dataComplemento,
-
-                ////};
-
-                //var CFDI = dataComprobante;
-                //CFDI = dataComprobante;
-
                 return Ok(CFDI);
 
 
@@ -98,33 +77,6 @@ namespace CFDI.Controllers
 
 
         }
-
-
-
-
-
-        //private static Emisor CFDI(XmlDocument xml, XmlNamespaceManager nsmgr)
-        //{
-        //    // Ejecutar la consulta XPath y crear el objeto Emisor
-        //    var nodeList = XmlHelper.SelectNodes(xml, "//cfdi:Comprobante/cfdi:Emisor", nsmgr);
-        //    var emisor = nodeList
-        //        .Cast<XmlNode>()
-        //        .Select(node => new Emisor
-        //        {
-        //            Rfc = node.Attributes["Rfc"].Value,
-        //            Nombre = node.Attributes["Nombre"].Value,
-        //            RegimenFiscal = Convert.ToInt32(node.Attributes["RegimenFiscal"].Value)
-        //        })
-        //        .FirstOrDefault();
-
-        //    if (emisor == null)
-        //    {
-        //        throw new Exception("No se encontró el nodo Emisor en el archivo XML.");
-        //    }
-
-        //    return emisor;
-        //}
-
 
     }
 }
