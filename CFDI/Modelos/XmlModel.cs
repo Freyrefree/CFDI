@@ -77,7 +77,7 @@ namespace CFDI
 		public Traslados Traslados { get; set; }
 
 		[XmlAttribute(AttributeName = "TotalImpuestosTrasladados")]
-		public DateTime TotalImpuestosTrasladados { get; set; }
+		public double TotalImpuestosTrasladados { get; set; }
 	}
 
 	[XmlRoot(ElementName = "Concepto")]
@@ -94,7 +94,7 @@ namespace CFDI
 		public int NoIdentificacion { get; set; }
 
 		[XmlAttribute(AttributeName = "Cantidad")]
-		public DateTime Cantidad { get; set; }
+		public Double Cantidad { get; set; }
 
 		[XmlAttribute(AttributeName = "ClaveUnidad")]
 		public string ClaveUnidad { get; set; }
@@ -114,19 +114,19 @@ namespace CFDI
 		[XmlAttribute(AttributeName = "ObjetoImp")]
 		public int ObjetoImp { get; set; }
 
-        public static implicit operator Concepto(List<Concepto> v)
-        {
-            throw new NotImplementedException();
-        }
+
     }
 
 	[XmlRoot(ElementName = "Conceptos")]
 	public class Conceptos
 	{
 
-		[XmlElement(ElementName = "Concepto")]
-		public Concepto Concepto { get; set; }
-	}
+        //[XmlElement(ElementName = "Concepto")]
+        //public Concepto Concepto { get; set; }
+        [XmlElement(ElementName = "Concepto")]
+        public List<Concepto> Concepto { get; set; }
+
+    }
 
 	[XmlRoot(ElementName = "TimbreFiscalDigital")]
 	public class TimbreFiscalDigital
@@ -136,7 +136,7 @@ namespace CFDI
 		public string SchemaLocation { get; set; }
 
 		[XmlAttribute(AttributeName = "Version")]
-		public DateTime Version { get; set; }
+		public String Version { get; set; }
 
 		[XmlAttribute(AttributeName = "UUID")]
 		public string UUID { get; set; }
@@ -410,7 +410,7 @@ namespace CFDI
 		public string SchemaLocation { get; set; }
 
 		[XmlAttribute(AttributeName = "Version")]
-		public double Version { get; set; }
+		public string Version { get; set; }
 
 		[XmlAttribute(AttributeName = "Serie")]
 		public string Serie { get; set; }
@@ -434,7 +434,7 @@ namespace CFDI
 		public string Moneda { get; set; }
 
 		[XmlAttribute(AttributeName = "TipoCambio")]
-		public int TipoCambio { get; set; }
+		public double TipoCambio { get; set; }
 
 		[XmlAttribute(AttributeName = "Total")]
 		public double Total { get; set; }
@@ -452,7 +452,7 @@ namespace CFDI
 		public int Exportacion { get; set; }
 
 		[XmlAttribute(AttributeName = "NoCertificado")]
-		public double NoCertificado { get; set; }
+		public string NoCertificado { get; set; }
 
 		[XmlAttribute(AttributeName = "Certificado")]
 		public string Certificado { get; set; }

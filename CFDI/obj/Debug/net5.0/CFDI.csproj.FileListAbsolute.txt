@@ -29,3 +29,4 @@ C:\Users\MR.DESARR\Documents\Visual Studio 2019\Proyectos\CFDI\CFDI\obj\Debug\ne
 C:\Users\MR.DESARR\Documents\Visual Studio 2019\Proyectos\CFDI\CFDI\obj\Debug\net5.0\CFDI.genruntimeconfig.cache
 C:\Users\MR.DESARR\Documents\Visual Studio 2019\Proyectos\CFDI\CFDI\bin\Debug\net5.0\ref\CFDI.dll
 C:\Users\MR.DESARR\Documents\Visual Studio 2019\Proyectos\CFDI\CFDI\obj\Debug\net5.0\staticwebassets\CFDI.StaticWebAssets.xml
+C:\Users\MR.DESARR\Documents\Visual Studio 2019\Proyectos\CFDI\CFDI\obj\Debug\net5.0\CFDI.csproj.AssemblyReference.cache

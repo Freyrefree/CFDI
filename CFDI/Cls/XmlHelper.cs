@@ -41,6 +41,8 @@ namespace CFDI
                     }
                 }
 
+                // Agregar el namespace "tfd"
+                nsmgr.AddNamespace("tfd", "http://www.sat.gob.mx/TimbreFiscalDigital");
                 //var dataCFDI = CFDI(xml, nsmgr);
 
                 return nsmgr;
