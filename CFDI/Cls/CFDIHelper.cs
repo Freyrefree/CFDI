@@ -241,6 +241,45 @@ namespace CFDI.Cls
             }
         }
 
+        public static ComercioExterior CFDI_ComercioExterior()
+        {
+            // Ejecutar la consulta XPath y crear el objeto ComercioExterior
+            var nodeList = XmlHelper.SelectNodes(xml, "//cfdi:Comprobante/cfdi:Complemento/cce11:ComercioExterior", nsgmr);
+
+            var data = nodeList
+                    .Cast<XmlNode>()
+                    .Select(node => new ComercioExterior
+                    {
+                        // Otras propiedades de ComercioExterior
+
+                        Mercancias = node.SelectNodes("cce11:Mercancias", nsgmr)
+                            .Cast<XmlNode>()
+                            .Select(mercanciaNode => new Mercancias
+                            {
+                                Mercancia = new Mercancia
+                                {
+                                    NoIdentificacion = node.SelectSingleNode("//cce11:Mercancia", nsgmr)?.Attributes["NoIdentificacion"]?.Value ?? "",
+                                    FraccionArancelaria = node.SelectSingleNode("//cce11:Mercancia", nsgmr)?.Attributes["FraccionArancelaria"]?.Value ?? "",
+                                    CantidadAduana = double.Parse(node.SelectSingleNode("//cce11:Mercancia", nsgmr)?.Attributes["CantidadAduana"]?.Value ?? "0"),
+                                    UnidadAduana = node.SelectSingleNode("//cce11:Mercancia", nsgmr)?.Attributes["UnidadAduana"]?.Value ?? "",
+                                    ValorUnitarioAduana = double.Parse(node.SelectSingleNode("//cce11:Mercancia", nsgmr)?.Attributes["ValorUnitarioAduana"]?.Value ?? "0"),
+                                    ValorDolares = double.Parse(node.SelectSingleNode("//cce11:Mercancia", nsgmr)?.Attributes["ValorDolares"]?.Value ?? "0"),
+
+                                }
+                            })
+                            .FirstOrDefault()
+                    })
+                    .FirstOrDefault();
+
+            if (data == null)
+            {
+                throw new Exception("No se encontró el nodo ComercioExterior en el archivo XML.");
+            }
+
+            return data;
+        }
+
+
 
 
 

@@ -398,7 +398,10 @@ namespace CFDI
 		[XmlElement(ElementName = "Complemento")]
 		public Complemento Complemento { get; set; }
 
-		[XmlElement(ElementName = "Addenda")]
+        [XmlElement(ElementName = "ComercioExterior")]
+        public ComercioExterior ComercioExterior { get; set; }
+
+        [XmlElement(ElementName = "Addenda")]
 		public Addenda Addenda { get; set; }
 
 		[XmlAttribute(AttributeName = "cce11")]
@@ -623,6 +626,71 @@ namespace CFDI
     public class PayableAmount
     {
         public double Amount { get; set; }
+    }
+
+    //--------------------------------- Comercio Exterio -------------------------
+
+    [XmlRoot(ElementName = "ComercioExterior", Namespace = "http://www.sat.gob.mx/ComercioExterior11")]
+    public class ComercioExterior
+    {
+        [XmlAttribute("Version")]
+        public string Version { get; set; }
+
+        [XmlAttribute("TipoOperacion")]
+        public string TipoOperacion { get; set; }
+
+        [XmlAttribute("ClaveDePedimento")]
+        public string ClaveDePedimento { get; set; }
+
+        [XmlAttribute("CertificadoOrigen")]
+        public string CertificadoOrigen { get; set; }
+
+        [XmlAttribute("Incoterm")]
+        public string Incoterm { get; set; }
+
+        [XmlAttribute("TipoCambioUSD")]
+        public string TipoCambioUSD { get; set; }
+
+        [XmlAttribute("TotalUSD")]
+        public string TotalUSD { get; set; }
+
+        [XmlAttribute("Subdivision")]
+        public string Subdivision { get; set; }
+
+        [XmlAttribute("Observaciones")]
+        public string Observaciones { get; set; }
+
+        public Emisor Emisor { get; set; }
+
+        public Receptor Receptor { get; set; }
+
+        public Mercancias Mercancias { get; set; }
+    }
+
+    public class Mercancias
+    {
+        public Mercancia Mercancia { get; set; }
+    }
+
+    public class Mercancia
+    {
+        [XmlAttribute("NoIdentificacion")]
+        public string NoIdentificacion { get; set; }
+
+        [XmlAttribute("FraccionArancelaria")]
+        public string FraccionArancelaria { get; set; }
+
+        [XmlAttribute("CantidadAduana")]
+        public double CantidadAduana { get; set; }
+
+        [XmlAttribute("UnidadAduana")]
+        public string UnidadAduana { get; set; }
+
+        [XmlAttribute("ValorUnitarioAduana")]
+        public double ValorUnitarioAduana { get; set; }
+
+        [XmlAttribute("ValorDolares")]
+        public double ValorDolares { get; set; }
     }
 
 
