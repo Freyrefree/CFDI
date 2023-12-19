@@ -206,6 +206,44 @@ namespace CFDI.Cls
             return data;
         }
 
+        public static Addenda Addenda()
+        {
+
+            try
+            {
+                var nodeList = XmlHelper.SelectNodes(xml, "//cfdi:Comprobante", nsgmr);
+                var data = nodeList
+                    .Cast<XmlNode>()
+                    .Select(node => new Addenda
+                    {
+                        RequestForPayment = new RequestForPayment
+                        {
+                            OrderIdentification = new OrderIdentification
+                            {
+                                ReferenceIdentification = xml.SelectSingleNode("//requestForPayment/orderIdentification/referenceIdentification", nsgmr)?.InnerText,
+
+                            }
+                        }
+                    })
+                    .FirstOrDefault();
+
+                if (data == null)
+                {
+                    throw new Exception("No se encontró el nodo Addenda en el archivo XML.");
+                }
+
+                return data;
+            }
+            catch (Exception ex)
+            {
+
+                return null; // O devuelve un valor predeterminado, dependiendo de tus necesidades.
+            }
+        }
+
+
+
+
 
     }
 }

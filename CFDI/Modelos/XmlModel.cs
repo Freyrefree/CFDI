@@ -368,14 +368,18 @@ namespace CFDI
 	}
 
 	[XmlRoot(ElementName = "Addenda")]
-	public class Addenda
-	{
 
+
+    public class Addenda
+    {
 		[XmlElement(ElementName = "facturasap")]
 		public Facturasap Facturasap { get; set; }
-	}
 
-	[XmlRoot(ElementName = "Comprobante")]
+		[XmlElement(ElementName = "requestForPayment")]
+        public RequestForPayment RequestForPayment { get; set; }
+    }
+
+    [XmlRoot(ElementName = "Comprobante")]
 	public class Comprobante
 	{
 
@@ -460,6 +464,166 @@ namespace CFDI
 		[XmlAttribute(AttributeName = "Sello")]
 		public string Sello { get; set; }
 	}
+
+    [XmlRoot(ElementName = "requestForPayment", Namespace = "http://www.sat.gob.mx/cfd/4")]
+    public class RequestForPayment
+    {
+        [XmlAttribute(AttributeName = "type")]
+        public string Type { get; set; }
+
+        [XmlAttribute(AttributeName = "contentVersion")]
+        public string ContentVersion { get; set; }
+
+        [XmlAttribute(AttributeName = "documentStructureVersion")]
+        public string DocumentStructureVersion { get; set; }
+
+        [XmlAttribute(AttributeName = "documentStatus")]
+        public string DocumentStatus { get; set; }
+
+        [XmlAttribute(AttributeName = "DeliveryDate")]
+        public DateTime DeliveryDate { get; set; }
+
+        public RequestForPaymentIdentification RequestForPaymentIdentification { get; set; }
+        public SpecialInstruction SpecialInstruction { get; set; }
+        public OrderIdentification OrderIdentification { get; set; }
+        public AdditionalInformation AdditionalInformation { get; set; }
+        public Buyer Buyer { get; set; }
+        public Seller Seller { get; set; }
+        public LineItem LineItem { get; set; }
+        public BaseAmount BaseAmount { get; set; }
+        public Tax VAT { get; set; }
+        public Tax GST { get; set; }
+        public PayableAmount PayableAmount { get; set; }
+    }
+
+    public class RequestForPaymentIdentification
+    {
+        public string EntityType { get; set; }
+        public string UniqueCreatorIdentification { get; set; }
+    }
+
+    public class SpecialInstruction
+    {
+        [XmlAttribute(AttributeName = "code")]
+        public string Code { get; set; }
+        public string Text { get; set; }
+    }
+
+    public class OrderIdentification
+    {
+        public string ReferenceIdentification { get; set; }
+    }
+
+    public class AdditionalInformation
+    {
+        public string ReferenceIdentification { get; set; }
+    }
+
+    public class Buyer
+    {
+        public string GLN { get; set; }
+    }
+
+    public class Seller
+    {
+        public string GLN { get; set; }
+
+        [XmlElement(ElementName = "alternatePartyIdentification")]
+        public AlternatePartyIdentification AlternatePartyIdentification { get; set; }
+    }
+
+    public class AlternatePartyIdentification
+    {
+        [XmlAttribute(AttributeName = "type")]
+        public string Type { get; set; }
+        public string Value { get; set; }
+    }
+
+    public class LineItem
+    {
+        [XmlAttribute(AttributeName = "type")]
+        public string Type { get; set; }
+
+        [XmlAttribute(AttributeName = "number")]
+        public string Number { get; set; }
+
+        public TradeItemIdentification TradeItemIdentification { get; set; }
+        public TradeItemDescriptionInformation TradeItemDescriptionInformation { get; set; }
+        public InvoicedQuantity InvoicedQuantity { get; set; }
+        public AditionalQuantity AditionalQuantity { get; set; }
+        public NetPrice NetPrice { get; set; }
+        public List<TradeItemTaxInformation> TradeItemTaxInformation { get; set; }
+        public TotalLineAmount TotalLineAmount { get; set; }
+    }
+
+    public class TradeItemIdentification
+    {
+        public string GTIN { get; set; }
+    }
+
+    public class TradeItemDescriptionInformation
+    {
+        public string LongText { get; set; }
+    }
+
+    public class InvoicedQuantity
+    {
+        [XmlAttribute(AttributeName = "unitOfMeasure")]
+        public string UnitOfMeasure { get; set; }
+        public double Value { get; set; }
+    }
+
+    public class AditionalQuantity
+    {
+        [XmlAttribute(AttributeName = "QuantityType")]
+        public string QuantityType { get; set; }
+    }
+
+    public class NetPrice
+    {
+        public double Amount { get; set; }
+    }
+
+    public class TradeItemTaxInformation
+    {
+        public string TaxTypeDescription { get; set; }
+        public TradeItemTaxAmount TradeItemTaxAmount { get; set; }
+    }
+
+    public class TradeItemTaxAmount
+    {
+        public double TaxPercentage { get; set; }
+        public double TaxAmount { get; set; }
+    }
+
+    public class TotalLineAmount
+    {
+        public NetAmount NetAmount { get; set; }
+    }
+
+    public class NetAmount
+    {
+        public double Amount { get; set; }
+    }
+
+    public class BaseAmount
+    {
+        public double Amount { get; set; }
+    }
+
+    public class Tax
+    {
+        [XmlAttribute(AttributeName = "type")]
+        public string Type { get; set; }
+
+        public double TaxPercentage { get; set; }
+        public double TaxAmount { get; set; }
+    }
+
+    public class PayableAmount
+    {
+        public double Amount { get; set; }
+    }
 
 
 

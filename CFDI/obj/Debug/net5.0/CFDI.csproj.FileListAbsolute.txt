@@ -27,6 +27,10 @@ C:\Users\MR.DESARR\Documents\Visual Studio 2019\Proyectos\CFDI\CFDI\obj\Debug\ne
 C:\Users\MR.DESARR\Documents\Visual Studio 2019\Proyectos\CFDI\CFDI\obj\Debug\net5.0\ref\CFDI.dll
 C:\Users\MR.DESARR\Documents\Visual Studio 2019\Proyectos\CFDI\CFDI\obj\Debug\net5.0\CFDI.pdb
 C:\Users\MR.DESARR\Documents\Visual Studio 2019\Proyectos\CFDI\CFDI\obj\Debug\net5.0\CFDI.genruntimeconfig.cache
-C:\Users\MR.DESARR\Documents\Visual Studio 2019\Proyectos\CFDI\CFDI\bin\Debug\net5.0\ref\CFDI.dll
-C:\Users\MR.DESARR\Documents\Visual Studio 2019\Proyectos\CFDI\CFDI\obj\Debug\net5.0\staticwebassets\CFDI.StaticWebAssets.xml
-C:\Users\MR.DESARR\Documents\Visual Studio 2019\Proyectos\CFDI\CFDI\obj\Debug\net5.0\CFDI.csproj.AssemblyReference.cache
+C:\Users\mr.desarr\Documents\Visual Studio 2019\Proyectos\CFDI\CFDI\obj\Debug\net5.0\CFDI.csproj.AssemblyReference.cache
+C:\Users\mr.desarr\Documents\Visual Studio 2019\Proyectos\CFDI\CFDI\obj\Debug\net5.0\staticwebassets\CFDI.StaticWebAssets.Pack.cache
+C:\Users\mr.desarr\Documents\Visual Studio 2019\Proyectos\CFDI\CFDI\obj\Debug\net5.0\staticwebassets\msbuild.CFDI.Microsoft.AspNetCore.StaticWebAssets.props
+C:\Users\mr.desarr\Documents\Visual Studio 2019\Proyectos\CFDI\CFDI\obj\Debug\net5.0\staticwebassets\msbuild.build.CFDI.props
+C:\Users\mr.desarr\Documents\Visual Studio 2019\Proyectos\CFDI\CFDI\obj\Debug\net5.0\staticwebassets\msbuild.buildMultiTargeting.CFDI.props
+C:\Users\mr.desarr\Documents\Visual Studio 2019\Proyectos\CFDI\CFDI\obj\Debug\net5.0\staticwebassets\msbuild.buildTransitive.CFDI.props
+C:\Users\mr.desarr\Documents\Visual Studio 2019\Proyectos\CFDI\CFDI\obj\Debug\net5.0\refint\CFDI.dll
