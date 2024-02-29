@@ -1,0 +1,14 @@
+C:\Users\mr.desarr\Documents\Visual Studio 2022\Proyectos\CFDI\CFDI\obj\Release\net6.0\PubTmp\Out\CFDI.exe
+C:\Users\mr.desarr\Documents\Visual Studio 2022\Proyectos\CFDI\CFDI\obj\Release\net6.0\PubTmp\Out\appsettings.Development.json
+C:\Users\mr.desarr\Documents\Visual Studio 2022\Proyectos\CFDI\CFDI\obj\Release\net6.0\PubTmp\Out\appsettings.json
+C:\Users\mr.desarr\Documents\Visual Studio 2022\Proyectos\CFDI\CFDI\obj\Release\net6.0\PubTmp\Out\CFDI.dll
+C:\Users\mr.desarr\Documents\Visual Studio 2022\Proyectos\CFDI\CFDI\obj\Release\net6.0\PubTmp\Out\CFDI.deps.json
+C:\Users\mr.desarr\Documents\Visual Studio 2022\Proyectos\CFDI\CFDI\obj\Release\net6.0\PubTmp\Out\CFDI.runtimeconfig.json
+C:\Users\mr.desarr\Documents\Visual Studio 2022\Proyectos\CFDI\CFDI\obj\Release\net6.0\PubTmp\Out\CFDI.pdb
+C:\Users\mr.desarr\Documents\Visual Studio 2022\Proyectos\CFDI\CFDI\obj\Release\net6.0\PubTmp\Out\Microsoft.DotNet.PlatformAbstractions.dll
+C:\Users\mr.desarr\Documents\Visual Studio 2022\Proyectos\CFDI\CFDI\obj\Release\net6.0\PubTmp\Out\Microsoft.Extensions.DependencyModel.dll
+C:\Users\mr.desarr\Documents\Visual Studio 2022\Proyectos\CFDI\CFDI\obj\Release\net6.0\PubTmp\Out\Microsoft.OpenApi.dll
+C:\Users\mr.desarr\Documents\Visual Studio 2022\Proyectos\CFDI\CFDI\obj\Release\net6.0\PubTmp\Out\Newtonsoft.Json.dll
+C:\Users\mr.desarr\Documents\Visual Studio 2022\Proyectos\CFDI\CFDI\obj\Release\net6.0\PubTmp\Out\Swashbuckle.AspNetCore.Swagger.dll
+C:\Users\mr.desarr\Documents\Visual Studio 2022\Proyectos\CFDI\CFDI\obj\Release\net6.0\PubTmp\Out\Swashbuckle.AspNetCore.SwaggerGen.dll
+C:\Users\mr.desarr\Documents\Visual Studio 2022\Proyectos\CFDI\CFDI\obj\Release\net6.0\PubTmp\Out\Swashbuckle.AspNetCore.SwaggerUI.dll

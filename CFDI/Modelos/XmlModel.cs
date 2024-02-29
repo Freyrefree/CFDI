@@ -272,7 +272,7 @@ namespace CFDI
 		public object VENDEDOR { get; set; }
 
 		[XmlAttribute(AttributeName = "TOTPZA")]
-		public DateTime TOTPZA { get; set; }
+		public string TOTPZA { get; set; }
 
 		[XmlAttribute(AttributeName = "INCOTERM")]
 		public string INCOTERM { get; set; }
@@ -284,7 +284,7 @@ namespace CFDI
 		public object CIE { get; set; }
 
 		[XmlAttribute(AttributeName = "ORDCOMP")]
-		public int ORDCOMP { get; set; }
+		public string ORDCOMP { get; set; }
 
 		[XmlAttribute(AttributeName = "EMAILCONTACTO")]
 		public string EMAILCONTACTO { get; set; }
@@ -404,7 +404,10 @@ namespace CFDI
         [XmlElement(ElementName = "Addenda")]
 		public Addenda Addenda { get; set; }
 
-		[XmlAttribute(AttributeName = "cce11")]
+        [XmlElement(ElementName = "Cab")]
+        public Cab Cab { get; set; }
+
+        [XmlAttribute(AttributeName = "cce11")]
 		public string Cce11 { get; set; }
 
 		[XmlAttribute(AttributeName = "cfdi")]

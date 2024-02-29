@@ -47,6 +47,7 @@ namespace CFDI.Controllers
                     var dataComprobante = CFDIHelper.CFDI_Comprobante();
                     var dataAddenda = CFDIHelper.Addenda();
                     var dataComercioExterior = CFDIHelper.CFDI_ComercioExterior();
+                    var dataCab = CFDIHelper.Cab();
 
                 // Asignar los valores al objeto CFDI
                     CFDI.Emisor = dataEmisor;
@@ -73,6 +74,8 @@ namespace CFDI.Controllers
                     CFDI.Sello = dataComprobante.Sello;
                     CFDI.Addenda = dataAddenda;
                     CFDI.ComercioExterior = dataComercioExterior;
+                    CFDI.Cab = dataCab;
+                
 
 
                 

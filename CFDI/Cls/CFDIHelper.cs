@@ -240,44 +240,101 @@ namespace CFDI.Cls
                 return null; // O devuelve un valor predeterminado, dependiendo de tus necesidades.
             }
         }
-
-        public static ComercioExterior CFDI_ComercioExterior()
+        public static Cab Cab()
         {
-            // Ejecutar la consulta XPath y crear el objeto ComercioExterior
-            var nodeList = XmlHelper.SelectNodes(xml, "//cfdi:Comprobante/cfdi:Complemento/cce11:ComercioExterior", nsgmr);
 
-            var data = nodeList
+            try
+            {
+
+                var nodeList = XmlHelper.SelectNodes(xml, "//cfdi:Comprobante/cfdi:Addenda/facturasap/Documento", nsgmr);
+                var data = nodeList
                     .Cast<XmlNode>()
-                    .Select(node => new ComercioExterior
+                    .Select(node => new Cab
                     {
-                        // Otras propiedades de ComercioExterior
+                        //Documento = new Documento
+                        //{ 
+                            //Documento =new Documento
+                            //{
+                                //Cab = new Cab
+                                //{
+                                    //ORDCOMP =
+                                    //ORDCOMP = xml.SelectSingleNode("//ORDCOMP", nsgmr)?.InnerText,
+                        ORDCOMP = node.SelectSingleNode("//@ORDCOMP")?.Value,
+                        INCOTERM = node.SelectSingleNode("//@INCOTERM")?.Value,
+                        TOTPZA = node.SelectSingleNode("//@TOTPZA")?.Value
+                        
 
-                        Mercancias = node.SelectNodes("cce11:Mercancias", nsgmr)
-                            .Cast<XmlNode>()
-                            .Select(mercanciaNode => new Mercancias
-                            {
-                                Mercancia = new Mercancia
-                                {
-                                    NoIdentificacion = node.SelectSingleNode("//cce11:Mercancia", nsgmr)?.Attributes["NoIdentificacion"]?.Value ?? "",
-                                    FraccionArancelaria = node.SelectSingleNode("//cce11:Mercancia", nsgmr)?.Attributes["FraccionArancelaria"]?.Value ?? "",
-                                    CantidadAduana = double.Parse(node.SelectSingleNode("//cce11:Mercancia", nsgmr)?.Attributes["CantidadAduana"]?.Value ?? "0"),
-                                    UnidadAduana = node.SelectSingleNode("//cce11:Mercancia", nsgmr)?.Attributes["UnidadAduana"]?.Value ?? "",
-                                    ValorUnitarioAduana = double.Parse(node.SelectSingleNode("//cce11:Mercancia", nsgmr)?.Attributes["ValorUnitarioAduana"]?.Value ?? "0"),
-                                    ValorDolares = double.Parse(node.SelectSingleNode("//cce11:Mercancia", nsgmr)?.Attributes["ValorDolares"]?.Value ?? "0"),
 
-                                }
-                            })
-                            .FirstOrDefault()
+                        //}
+                        //}
+                        //OrderIdentification = new OrderIdentification
+                        //{
+                        //    ReferenceIdentification = xml.SelectSingleNode("//requestForPayment/orderIdentification/referenceIdentification", nsgmr)?.InnerText,
+
+                        //}
+                        //}
                     })
                     .FirstOrDefault();
 
-            if (data == null)
-            {
-                throw new Exception("No se encontró el nodo ComercioExterior en el archivo XML.");
-            }
+                if (data == null)
+                {
+                    throw new Exception("No se encontró el nodo Cab de pedidoSAP en el archivo XML.");
+                }
 
-            return data;
+                return data;
+            }
+            catch (Exception ex)
+            {
+
+                return null; // O devuelve un valor predeterminado, dependiendo de tus necesidades.
+            }
         }
+
+        public static ComercioExterior CFDI_ComercioExterior()
+        {
+            try
+            {
+                // Ejecutar la consulta XPath y crear el objeto ComercioExterior
+                var nodeList = XmlHelper.SelectNodes(xml, "//cfdi:Comprobante/cfdi:Complemento/cce11:ComercioExterior", nsgmr);
+
+                var data = nodeList
+                        .Cast<XmlNode>()
+                        .Select(node => new ComercioExterior
+                        {
+                            // Otras propiedades de ComercioExterior
+
+                            Mercancias = node.SelectNodes("cce11:Mercancias", nsgmr)
+                                .Cast<XmlNode>()
+                                .Select(mercanciaNode => new Mercancias
+                                {
+                                    Mercancia = new Mercancia
+                                    {
+                                        NoIdentificacion = node.SelectSingleNode("//cce11:Mercancia", nsgmr)?.Attributes["NoIdentificacion"]?.Value ?? "",
+                                        FraccionArancelaria = node.SelectSingleNode("//cce11:Mercancia", nsgmr)?.Attributes["FraccionArancelaria"]?.Value ?? "",
+                                        CantidadAduana = double.Parse(node.SelectSingleNode("//cce11:Mercancia", nsgmr)?.Attributes["CantidadAduana"]?.Value ?? "0"),
+                                        UnidadAduana = node.SelectSingleNode("//cce11:Mercancia", nsgmr)?.Attributes["UnidadAduana"]?.Value ?? "",
+                                        ValorUnitarioAduana = double.Parse(node.SelectSingleNode("//cce11:Mercancia", nsgmr)?.Attributes["ValorUnitarioAduana"]?.Value ?? "0"),
+                                        ValorDolares = double.Parse(node.SelectSingleNode("//cce11:Mercancia", nsgmr)?.Attributes["ValorDolares"]?.Value ?? "0"),
+                                    }
+                                })
+                                .FirstOrDefault()
+                        })
+                        .FirstOrDefault();
+
+                if (data == null)
+                {
+                    throw new Exception("No se encontró el nodo ComercioExterior en el archivo XML.");
+                }
+
+                return data;
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine($"Se produjo una excepción: {ex.Message}");
+                return null;
+            }
+        }
+
 
 
 
